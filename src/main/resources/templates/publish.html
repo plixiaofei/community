@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Community-question</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/mycss.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+</head>
+<body >
+    <div th:insert="~{navigation::nav}"></div>
+    <!--body-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 my-publish-main">
+                <!--icon link:http://glyphicons.com/-->
+                <h2 class="my-question-h2">Question</h2>
+                <form action="/doPublish" method="POST">
+                    <input type="text" class="form-control my-publish-title" name="title" required="true" placeholder="在此输入问题标题" autocomplete="off">
+                    <textarea class="form-control" rows="10" name="description" required="true" placeholder="在此输入详细描述"></textarea>
+                    <button type="submit" class="btn btn-success my-question-submit">提交问题</button>
+                </form>
+            </div>
+            <div class="col-2"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="js/myjs.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

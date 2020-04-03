@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Community-Question-Description</title>
+    <!--css-->
+    <link rel="stylesheet" href="/css/mycss.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="/css/bootstrap-reboot.css">
+</head>
+<body>
+    <div th:insert="~{navigation::nav}"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-1"></div>
+            <div class="col-xl-8 col-md-12">
+                <div class="my-question-h2" th:text="${questionDTO.title}"></div>
+                <div class="my-border-bottom"><span class="my-question-userName">发布者:</span><a class="my-question-userName" href="#" th:text="${questionDTO.user.userName}"></a><span class="my-question-content-add"><span th:text="${questionDTO.viewCount}"></span>个观看 <span th:text="${questionDTO.commentCount}"></span>个评论 <span th:text="${questionDTO.likeCount}"></span>个喜欢 发布于<span th:text="${#dates.format(questionDTO.gmtCreate,'yyyy-MM-dd HH:mm')}"></span></span> </div>
+                <div class="my-question-content-description" th:text="${questionDTO.description}"></div>
+
+                <div class="my-comment-all-count">共<span th:text="${questionDTO.commentCount}"></span>条回复</div>
+                <ul class="list-group" id = comment-collection th:each="comment:${comments}">
+                    <li class="list-group-item" >
+                        <div class="my-comment-user">用户：<a href="#" class="my-question-userName" th:text="${comment.user.userName}"></a></div>
+                        <div class="my-comment-description" th:text="${comment.comment}"></div>
+                            <div class="my-question-content-add">于<span th:text="${#dates.format(comment.gmtCreate,'yyyy-MM-dd HH:mm')}"></span>回复</div></li>
+                </ul>
+<!--                <div class="my-comment-style" th:each="comment:${comments}">-->
+<!--                        <div class="my-comment-content" th:text="${comment.comment}"></div>-->
+<!--                        <div class="my-question-content-add"><span th:text="${comment.user.userName}"></span>于<span th:text="${#dates.format(comment.gmtCreate,'yyyy-MM-dd HH:mm')}"></span>回复</div>-->
+<!--s               </div>-->
+
+                <div class="my-margin-top-200">
+                    <div class="my-comment-form-user" th:if="${session.user} != null">用户名:<a href="#" class="my-comment-form-user-a" th:text="${session.user.userName}"></a></div>
+                    <div th:if="${session.user} == null">用户未登录</div>
+                    <input type="hidden" id="hidden_id" th:value="${questionDTO.id}">
+                    <textarea class="form-control" rows="10" name="comment" required="required" placeholder="在此处添加回复" id="comment"></textarea>
+                    <button type="submit" class="btn btn-success my-question-submit" onclick="postComment()" >回复问题</button>
+                </div>
+            </div>
+            <div class="col-xl-1"></div>
+            <div class="col-xl-2" th:insert="~{rightSide::right}"></div>
+        </div>
+    </div>
+
+    <!-- javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="/js/jquery-3.4.1.min.js" type="application/javascript"></script>
+    <script src="/js/bootstrap.min.js" type="application/javascript"></script>
+    <script src="/js/myjs.js" type="application/javascript"></script>
+</body>
+</html>

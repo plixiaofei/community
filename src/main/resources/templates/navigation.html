@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="nav">
+    <nav class="my-nav navbar navbar-expand navbar-dark bg-dark container-fluid" style="min-width: 160px">
+        <!-- <a class="navbar" href="#">B</a> -->
+        <div class="navbar-nav-scroll">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <button type="button" class="my-navbar-brand">B</button>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item"></li>
+                <a class="nav-link" href="#">Document</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Examples</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Icons</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Themes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Expo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="navbar-nav ml-md-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fab fa-github"></i></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fab fa-github"></i></a>
+            </li>
+
+            <a class="my-nav-right-btn" href="#">下载</a>
+            <a class="my-nav-right-btn" href="/signIn" th:if="${session.user} == null">注册</a>
+
+            <a class="my-nav-right-btn" href="/loginIn" th:if="${session.user} == null">登录</a>
+
+            <from th:if="${session.user} != null" id="email">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                       data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        <span th:text="${session.user.userName}"></span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/profile/my-questions">个人中心</a>
+                        <a class="dropdown-item" href="/profile/my-questions">我的问题</a>
+                        <a class="dropdown-item" href="/profile/my-replies">我的回复</a>
+                        <a class="dropdown-item" href="/logOut">退出登录</a>
+                    </div>
+                </li>
+            </from>
+            <a class="my-nav-right-btn" href="/publish" th:if="${session.user} != null">提问</a>
+            </a>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>

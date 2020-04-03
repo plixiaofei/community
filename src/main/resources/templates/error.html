@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>错误页面</title>
+        <link rel="stylesheet" href="/css/mycss.css">
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/bootstrap-grid.css">
+        <link rel="stylesheet" href="/css/bootstrap-reboot.css">
+    </head>
+
+    <body style="text-align: center">
+    <div th:insert="~{navigation::nav}"></div>
+    <h1>Sorry,Exception occured!</h1>
+    <p th:text="${message}"></p>
+
+    <!--js-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="/js/myjs.js"></script>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    </body>
+</html>

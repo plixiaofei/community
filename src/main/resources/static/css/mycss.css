@@ -1,0 +1,265 @@
+/* html */
+body {
+   overflow-x: hidden;
+}
+
+.rgb999 {
+  color: #999;
+}
+
+.my-margin-top-200 {
+    margin-top: 200px;
+}
+
+.my-border-bottom {
+    color: #999;
+    padding-bottom: 20px;
+    border-bottom: solid 1px #999;
+}
+
+/* navbar */
+.my-navbar-brand {
+    margin-top: 7px;
+    padding: 1px 10px;
+    border: solid 5px #464d55 transparent;
+    background-color: #464d55aa;
+    color: violet;
+    font-family: 20px;
+    border-radius: 5px;
+}
+
+.my-navbar-height {
+    height: 78px;
+}
+
+.my-navbar-ul-center {
+    align-items: center;
+}
+
+
+/* @media (max-width: 991.98px) */
+/* .navbar-nav-scroll {
+    max-width: 100%;
+    height: 2.5rem;
+    margin-top: .25rem;
+    /* overflow: hidden; */
+/* } */
+
+.my-nav {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.my-nav-right-btn {
+    margin: 0px 5px auto;
+    color: yellow;
+    border: solid 1px yellow;
+    border-radius: 6px;
+    padding: 7px 20px;
+    height: 45px;
+    width: 82px;
+}
+
+.my-nav-right-btn:hover { 
+    text-decoration: none;
+    background-color: yellow;
+    color: #343a40;
+    border-color: yellow;
+}
+
+/* left-sidebar */
+.my-left-sidebar-search-form {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 20px;
+}
+
+
+.my-left-sidebar-search {
+    position: relative;
+    margin: 0px auto;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    border: solid 1px rgb(233,233,233);
+    width: 100%;
+}
+
+.my-left-sidebar-ul {
+    list-style-type: none;
+    font-size: 24px;
+}
+
+.my-left-sidebar-li {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.my-scroll-spy {
+    position: relative;
+    height:700px;
+    overflow-y: auto;
+}
+
+
+/* login-in.css */
+.my-login-in-border {
+    display: inline-block;
+    margin-top: 100px;
+    padding: 10px 20px;
+    border: solid 1px rgb(233,233,233);
+    border-radius: 10px;
+}
+
+/*publish && question.css*/
+.my-publish-main {
+    padding: 40px;
+    margin-top: 50px;
+    border: solid 1px rgb(233,233,233);
+    border-radius: 10px;
+}
+
+.my-publish-title {
+    margin-bottom: 30px;
+}
+
+.my-question-submit {
+    float: right;
+    margin-top: 30px;
+}
+
+.my-question-h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.my-question-content-add {
+    color: #999;
+    font-size: 17px;
+    float: right;
+}
+
+.my-question-content-description {
+    margin-bottom: 300px;
+}
+
+.my-question-userName {
+    color: black;
+    font-size: 17px;
+    margin: 20px 0px;
+}
+
+.my-question-userName:hover {
+    text-decoration: none;
+}
+
+/*index*/
+
+.my-content-picture {
+    border: solid 1px black;
+    margin: 13px;
+}
+
+.my-content-add {
+    color: #999;
+    font-size: 17px;
+}
+
+.my-content-title {
+    padding-top: 10px;
+}
+
+.my-content-a {
+    color: black;
+    font-size: 30px;
+}
+
+.my-content-a:hover {
+    text-decoration: none;
+}
+
+.my-index-failed {
+    margin-bottom: 30px;
+}
+
+/*comment*/
+.my-comment-style {
+    margin-bottom: 50px;
+    border-top: solid 1px #999;
+}
+
+.my-comment-content {
+    margin: 10px 0px;
+    overflow: hidden;
+    white-space: normal;
+    word-break: break-all;
+}
+
+.my-comment-form-user {
+    margin: 10px;
+}
+
+.my-comment-form-user-a {
+    color: black;
+}
+.my-comment-form-user-a:hover {
+    text-decoration: none;
+}
+
+.my-comment-all-count {
+    font-size: 40px;
+    margin: 10px;
+    color: #999;
+}
+
+.my-comment-user {
+    margin-bottom: 20px;
+}
+
+.my-comment-description {
+    padding-left: 20px;
+}
+
+.comment-no-publish {
+    font-size: 50px;
+    margin: 50px 30px;
+    color: #999;
+}
+
+/*right-area*/
+.my-right-sidebar-ul {
+    list-style: none;
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+.my-right-sidebar-li {
+    margin-left: 10px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #999;
+}
+
+.my-right-sidebar-li-a {
+    font-size: 20px;
+    line-height: 28px;
+    text-decoration: none;
+    color: black;
+}
+
+.my-right-sidebar-li-a:hover {
+    color: #999;
+    text-decoration: none;
+}
+
+/*body*/
+.row {
+    padding-top: 20px;
+}
+
+/*search*/
+.my-search-bar {
+    height: 700px;
+    overflow-y: scroll;
+}
